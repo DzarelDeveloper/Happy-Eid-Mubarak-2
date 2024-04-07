@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+    name='viewport' />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Happy Eid Mubarak</title>
+  <meta name="description" content="Happy Eid Mubarak">
+  <meta property="og:title" content="Happy Eid Mubarak" />
+  <meta property="og:description" content="Happy Eid Mubarak">
+  <link rel="shortcut icon" type="image/x-icon" href="Card-Logo.png">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    button {
+      outline: none;
+      border: none;
+      font-size: 18px;
+      text-transform: uppercase;
+      margin: auto;
+      cursor: pointer;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+
+    .group {
+      width: 100%;
+      display: grid;
+      gap: 50px;
+      grid-template-columns: repeat(auto-fill, 300px);
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 4rem;
+      text-align: center;
+    }
+
+    .autofill-btn {
+      display: block;
+      position: relative;
+      padding: 0.5em 2.2em;
+      font-size: 25px;
+      background: transparent;
+      cursor: pointer;
+      user-select: none;
+      overflow: hidden;
+    }
+
+    .autofill-btn span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      z-index: -1;
+      border: 5px solid #62c529;
+      text-align: center;
+    }
+
+    .autofill-btn span::before {
+      content: "";
+      position: absolute;
+      width: 8%;
+      height: 500%;
+      background: rgb(255, 255, 255);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-60deg);
+      transition: all 0.5s linear;
+    }
+
+    .autofill-btn:hover span::before {
+      transform: translate(-50%, -50%) rotate(-90deg);
+      width: 100%;
+      background: #62c529;
+    }
+
+    .alone {
+      line-height: 85px;
+      color: #fff;
+      font-size: 30px;
+      font-weight: 700;
+      font-family: 'Lato', sans-serif;
+      letter-spacing: 1px;
+      background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: animate 1.5s linear infinite;
+    }
+
+    @keyframes animate {
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="butn">
+    <button>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- partial:index.partial.html -->
+  <div class="wrapper">
+    <div class="inner">
+    </div>
+    <h2 style="color: #01787E;">Happy Eid Mubaarok ✨<span id="jam">Loading...</span></h2>
+    <p>
+      <br>تَقَبَّلَ اللَّهُ مِنَّا وَمِنْكُمْ كُلُّ عاَمٍ وَأَنْتُمْ بِخَيْرٍ
+      <br>Mohon Maaf Lahir Dan Batin✨<br> Maafin Dzarel Jika Ada Kesalahan Yang Di Sengaja Maupun Tidak Di Sengaja🙏🏻
+      <br>
+<br>Btw Minta THR Nya^_^<a href="THR.html" style="color: #fff; background-color: #3498db; padding: 3px 8px; border: 1px solid #3498db; border-radius: 3px; text-decoration: none;">Send</a>
+    </p>
+
+    <br>
+    <br>
+    <div class="sleeve">
+      <br>
+      <h2>Tap Here</h2>
+      <div class="circle"></div>
+      <img src="Card-Logo.png" class="dsa">
+      <h2 class="gsas">1445 H</h2>
+    </div>
+  </div>
+
+  <!-- partial -->
+  <script>
+    setInterval(() => {
+      var jamna = new Date().toLocaleTimeString('en-US', { timeZone: "Asia/Jakarta" });
+      document.getElementById("jam").innerHTML = jamna
+    }, 1000);  
+  </script>
+</body>
+
+</html>
